@@ -1,0 +1,121 @@
+{
+  "dataset_name": "UCI Cleveland Heart Disease",
+  "num_samples": 303,
+  "num_features": 13,
+  "target_column": "target",
+  "class_distribution": {
+    "no_disease": 164,
+    "disease": 139,
+    "disease_prevalence_pct": 45.87
+  },
+  "missing_values_handled": 6,
+  "features": {
+    "age": {
+      "type": "numerical",
+      "unit": "years",
+      "range": [
+        29,
+        77
+      ],
+      "mean": 54.4
+    },
+    "sex": {
+      "type": "categorical",
+      "values": {
+        "0": "Female",
+        "1": "Male"
+      }
+    },
+    "cp": {
+      "type": "categorical",
+      "values": {
+        "1": "Typical Angina",
+        "2": "Atypical Angina",
+        "3": "Non-anginal Pain",
+        "4": "Asymptomatic"
+      }
+    },
+    "trestbps": {
+      "type": "numerical",
+      "unit": "mm Hg",
+      "range": [
+        94,
+        200
+      ],
+      "mean": 131.7
+    },
+    "chol": {
+      "type": "numerical",
+      "unit": "mg/dl",
+      "range": [
+        126,
+        564
+      ],
+      "mean": 246.7
+    },
+    "fbs": {
+      "type": "categorical",
+      "values": {
+        "0": "<= 120 mg/dl",
+        "1": "> 120 mg/dl"
+      }
+    },
+    "restecg": {
+      "type": "categorical",
+      "values": {
+        "0": "Normal",
+        "1": "ST-T Wave Abnormality",
+        "2": "Left Ventricular Hypertrophy"
+      }
+    },
+    "thalach": {
+      "type": "numerical",
+      "unit": "bpm",
+      "range": [
+        71,
+        202
+      ],
+      "mean": 149.6
+    },
+    "exang": {
+      "type": "categorical",
+      "values": {
+        "0": "No",
+        "1": "Yes"
+      }
+    },
+    "oldpeak": {
+      "type": "numerical",
+      "unit": "depression",
+      "range": [
+        0.0,
+        6.2
+      ],
+      "mean": 1.04
+    },
+    "slope": {
+      "type": "categorical",
+      "values": {
+        "1": "Upsloping",
+        "2": "Flat",
+        "3": "Downsloping"
+      }
+    },
+    "ca": {
+      "type": "numerical",
+      "unit": "vessels",
+      "range": [
+        0,
+        3
+      ]
+    },
+    "thal": {
+      "type": "categorical",
+      "values": {
+        "3": "Normal",
+        "6": "Fixed Defect",
+        "7": "Reversible Defect"
+      }
+    }
+  }
+}

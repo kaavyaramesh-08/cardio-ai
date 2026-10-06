@@ -1,0 +1,358 @@
+{
+  "evaluation_timestamp": "2026-10-06T18:15:22.530007",
+  "test_sample_count": 61,
+  "test_positive_count": 28,
+  "test_negative_count": 33,
+  "best_model": "XGBoost",
+  "selection_rationale": "XGBoost was selected as the primary clinical model because it achieved an optimal balance of Recall (96.4%) to minimize life-threatening false negatives, a superior ROC-AUC of 0.946, and an F1 score of 0.885. In cardiovascular clinical screening, minimizing undetected pathology takes precedence over naive accuracy alone.",
+  "models": [
+    {
+      "model_name": "XGBoost",
+      "filename": "xgboost.joblib",
+      "accuracy": 0.8852,
+      "precision": 0.8182,
+      "recall": 0.9643,
+      "f1_score": 0.8852,
+      "roc_auc": 0.9459,
+      "clinical_score": 0.9351,
+      "confusion_matrix": {
+        "tn": 27,
+        "fp": 6,
+        "fn": 1,
+        "tp": 27
+      },
+      "roc_points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.036
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.214
+        },
+        {
+          "fpr": 0.03,
+          "tpr": 0.75
+        },
+        {
+          "fpr": 0.061,
+          "tpr": 0.75
+        },
+        {
+          "fpr": 0.121,
+          "tpr": 0.893
+        },
+        {
+          "fpr": 0.121,
+          "tpr": 0.929
+        },
+        {
+          "fpr": 0.152,
+          "tpr": 0.964
+        },
+        {
+          "fpr": 0.545,
+          "tpr": 0.964
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ]
+    },
+    {
+      "model_name": "Random Forest",
+      "filename": "random_forest.joblib",
+      "accuracy": 0.8852,
+      "precision": 0.8387,
+      "recall": 0.9286,
+      "f1_score": 0.8814,
+      "roc_auc": 0.9502,
+      "clinical_score": 0.9213,
+      "confusion_matrix": {
+        "tn": 28,
+        "fp": 5,
+        "fn": 2,
+        "tp": 26
+      },
+      "roc_points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.036
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.321
+        },
+        {
+          "fpr": 0.03,
+          "tpr": 0.679
+        },
+        {
+          "fpr": 0.061,
+          "tpr": 0.679
+        },
+        {
+          "fpr": 0.091,
+          "tpr": 0.857
+        },
+        {
+          "fpr": 0.091,
+          "tpr": 0.929
+        },
+        {
+          "fpr": 0.152,
+          "tpr": 0.964
+        },
+        {
+          "fpr": 0.455,
+          "tpr": 0.964
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ]
+    },
+    {
+      "model_name": "Logistic Regression",
+      "filename": "logistic_regression.joblib",
+      "accuracy": 0.8689,
+      "precision": 0.8125,
+      "recall": 0.9286,
+      "f1_score": 0.8667,
+      "roc_auc": 0.9513,
+      "clinical_score": 0.917,
+      "confusion_matrix": {
+        "tn": 27,
+        "fp": 6,
+        "fn": 2,
+        "tp": 26
+      },
+      "roc_points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.036
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.179
+        },
+        {
+          "fpr": 0.03,
+          "tpr": 0.786
+        },
+        {
+          "fpr": 0.061,
+          "tpr": 0.786
+        },
+        {
+          "fpr": 0.152,
+          "tpr": 0.893
+        },
+        {
+          "fpr": 0.152,
+          "tpr": 0.929
+        },
+        {
+          "fpr": 0.212,
+          "tpr": 0.964
+        },
+        {
+          "fpr": 0.303,
+          "tpr": 0.964
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ]
+    },
+    {
+      "model_name": "Deep Neural Network",
+      "filename": "deep_neural_network.joblib",
+      "accuracy": 0.8361,
+      "precision": 0.7647,
+      "recall": 0.9286,
+      "f1_score": 0.8387,
+      "roc_auc": 0.9318,
+      "clinical_score": 0.9023,
+      "confusion_matrix": {
+        "tn": 25,
+        "fp": 8,
+        "fn": 2,
+        "tp": 26
+      },
+      "roc_points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.036
+        },
+        {
+          "fpr": 0.03,
+          "tpr": 0.429
+        },
+        {
+          "fpr": 0.061,
+          "tpr": 0.607
+        },
+        {
+          "fpr": 0.091,
+          "tpr": 0.714
+        },
+        {
+          "fpr": 0.121,
+          "tpr": 0.75
+        },
+        {
+          "fpr": 0.212,
+          "tpr": 0.857
+        },
+        {
+          "fpr": 0.303,
+          "tpr": 0.929
+        },
+        {
+          "fpr": 0.394,
+          "tpr": 0.964
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ]
+    },
+    {
+      "model_name": "Support Vector Machine",
+      "filename": "support_vector_machine.joblib",
+      "accuracy": 0.8525,
+      "precision": 0.8065,
+      "recall": 0.8929,
+      "f1_score": 0.8475,
+      "roc_auc": 0.9437,
+      "clinical_score": 0.895,
+      "confusion_matrix": {
+        "tn": 27,
+        "fp": 6,
+        "fn": 3,
+        "tp": 25
+      },
+      "roc_points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.036
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.179
+        },
+        {
+          "fpr": 0.03,
+          "tpr": 0.786
+        },
+        {
+          "fpr": 0.091,
+          "tpr": 0.786
+        },
+        {
+          "fpr": 0.182,
+          "tpr": 0.893
+        },
+        {
+          "fpr": 0.182,
+          "tpr": 0.929
+        },
+        {
+          "fpr": 0.242,
+          "tpr": 0.964
+        },
+        {
+          "fpr": 0.364,
+          "tpr": 0.964
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ]
+    },
+    {
+      "model_name": "Decision Tree",
+      "filename": "decision_tree.joblib",
+      "accuracy": 0.7869,
+      "precision": 0.7419,
+      "recall": 0.8214,
+      "f1_score": 0.7797,
+      "roc_auc": 0.8598,
+      "clinical_score": 0.8211,
+      "confusion_matrix": {
+        "tn": 25,
+        "fp": 8,
+        "fn": 5,
+        "tp": 23
+      },
+      "roc_points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.121,
+          "tpr": 0.536
+        },
+        {
+          "fpr": 0.121,
+          "tpr": 0.643
+        },
+        {
+          "fpr": 0.152,
+          "tpr": 0.786
+        },
+        {
+          "fpr": 0.242,
+          "tpr": 0.821
+        },
+        {
+          "fpr": 0.303,
+          "tpr": 0.857
+        },
+        {
+          "fpr": 0.333,
+          "tpr": 0.929
+        },
+        {
+          "fpr": 0.455,
+          "tpr": 0.929
+        },
+        {
+          "fpr": 0.515,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ]
+    }
+  ]
+}

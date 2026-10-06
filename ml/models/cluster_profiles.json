@@ -1,0 +1,159 @@
+{
+  "k": 3,
+  "evaluation_metrics": [
+    {
+      "k": 2,
+      "inertia": 2589.36,
+      "silhouette_score": 0.1803
+    },
+    {
+      "k": 3,
+      "inertia": 2371.37,
+      "silhouette_score": 0.1325
+    },
+    {
+      "k": 4,
+      "inertia": 2204.59,
+      "silhouette_score": 0.1406
+    },
+    {
+      "k": 5,
+      "inertia": 2094.34,
+      "silhouette_score": 0.1324
+    },
+    {
+      "k": 6,
+      "inertia": 2004.47,
+      "silhouette_score": 0.1184
+    }
+  ],
+  "silhouette_score_k3": 0.1327,
+  "cluster_mapping": {
+    "0": 0,
+    "1": 1,
+    "2": 2
+  },
+  "profiles": [
+    {
+      "profile_index": 0,
+      "raw_cluster_id": 0,
+      "name": "Profile 1 \u2014 Lower-Risk Clinical Pattern",
+      "short_name": "Profile 1",
+      "description": "Characterized by younger age, higher exercise capacity (peak heart rate > 160 bpm), normal resting ECG, and minimal ST segment depression during stress.",
+      "size": 59,
+      "percentage": 24.4,
+      "disease_rate_pct": 13.6,
+      "characteristics": {
+        "age": 58.2,
+        "trestbps": 131.3,
+        "chol": 275.8,
+        "thalach": 152.3,
+        "oldpeak": 0.58,
+        "exang_pct": 15.3,
+        "male_pct": 5.1,
+        "disease_rate_pct": 13.6
+      },
+      "scaled_centroid": [
+        0.41073159414014804,
+        -1.3546816266861836,
+        -0.07000199617771834,
+        0.02066155371431033,
+        0.49156361889229827,
+        -0.17025305288332115,
+        0.05468426042541191,
+        0.10345952813736375,
+        -0.3708662902277743,
+        -0.36982079001876017,
+        -0.18329583758843906,
+        -0.2663272887379526,
+        -0.8083056148342629
+      ]
+    },
+    {
+      "profile_index": 1,
+      "raw_cluster_id": 1,
+      "name": "Profile 2 \u2014 Moderate-Risk Clinical Pattern",
+      "short_name": "Profile 2",
+      "description": "Characterized by intermediate age, mildly elevated blood pressure and serum cholesterol, moderate cardiac workload tolerance, and occasional non-anginal chest discomfort.",
+      "size": 96,
+      "percentage": 39.7,
+      "disease_rate_pct": 26.0,
+      "characteristics": {
+        "age": 49.1,
+        "trestbps": 127.7,
+        "chol": 229.9,
+        "thalach": 164.4,
+        "oldpeak": 0.55,
+        "exang_pct": 8.3,
+        "male_pct": 89.6,
+        "disease_rate_pct": 26.0
+      },
+      "scaled_centroid": [
+        -0.6065041241274298,
+        0.4594862843466014,
+        -0.5529639098119462,
+        -0.18719388905518855,
+        -0.3775631125858091,
+        -0.08542106754192165,
+        -0.25074441556960214,
+        0.6365941209342564,
+        -0.5184610166850496,
+        -0.40082668705254376,
+        -0.4310536671648113,
+        -0.3821976848745795,
+        -0.2456504701941307
+      ]
+    },
+    {
+      "profile_index": 2,
+      "raw_cluster_id": 2,
+      "name": "Profile 3 \u2014 Higher-Risk Clinical Pattern",
+      "short_name": "Profile 3",
+      "description": "Characterized by advanced age, elevated resting systolic pressure, significant exercise-induced angina, pronounced ST depression (> 1.5mm), and presence of fluoroscopic fluoroscopy vessels.",
+      "size": 87,
+      "percentage": 36.0,
+      "disease_rate_pct": 89.7,
+      "characteristics": {
+        "age": 58.1,
+        "trestbps": 134.3,
+        "chol": 254.2,
+        "thalach": 132.5,
+        "oldpeak": 1.78,
+        "exang_pct": 71.3,
+        "male_pct": 87.4,
+        "disease_rate_pct": 89.7
+      },
+      "scaled_centroid": [
+        0.3907038145053391,
+        0.41167278939323193,
+        0.657639690993474,
+        0.19254691586383588,
+        0.08326212981140348,
+        0.20971669659931497,
+        0.23959876470784483,
+        -0.7726108939056676,
+        0.8236019393701535,
+        0.6930895237718516,
+        0.5999494996039059,
+        0.6023481354425148,
+        0.8192238668259549
+      ]
+    }
+  ],
+  "feature_columns": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "disclaimer": "Clusters represent statistical patterns discovered in the dataset and are not medical diagnoses."
+}

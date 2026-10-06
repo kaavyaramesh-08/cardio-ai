@@ -1,0 +1,71 @@
+{
+  "model_used": "XGBoost",
+  "global_importance": [
+    {
+      "feature": "thal",
+      "label": "Thalassemia",
+      "importance": 0.8944
+    },
+    {
+      "feature": "ca",
+      "label": "Major Vessels Count",
+      "importance": 0.8475
+    },
+    {
+      "feature": "cp",
+      "label": "Chest Pain Type",
+      "importance": 0.7557
+    },
+    {
+      "feature": "sex",
+      "label": "Sex",
+      "importance": 0.491
+    },
+    {
+      "feature": "age",
+      "label": "Age",
+      "importance": 0.381
+    },
+    {
+      "feature": "oldpeak",
+      "label": "ST Depression",
+      "importance": 0.367
+    },
+    {
+      "feature": "thalach",
+      "label": "Maximum Heart Rate",
+      "importance": 0.3106
+    },
+    {
+      "feature": "chol",
+      "label": "Serum Cholesterol",
+      "importance": 0.3023
+    },
+    {
+      "feature": "slope",
+      "label": "ST Segment Slope",
+      "importance": 0.2961
+    },
+    {
+      "feature": "trestbps",
+      "label": "Resting Blood Pressure",
+      "importance": 0.2382
+    },
+    {
+      "feature": "exang",
+      "label": "Exercise-Induced Angina",
+      "importance": 0.1812
+    },
+    {
+      "feature": "restecg",
+      "label": "Resting ECG",
+      "importance": 0.1429
+    },
+    {
+      "feature": "fbs",
+      "label": "Fasting Blood Sugar",
+      "importance": 0.0088
+    }
+  ],
+  "base_value": -0.132
+}

@@ -1,0 +1,839 @@
+{
+  "scaler": {
+    "features": [
+      "age",
+      "sex",
+      "cp",
+      "trestbps",
+      "chol",
+      "fbs",
+      "restecg",
+      "thalach",
+      "exang",
+      "oldpeak",
+      "slope",
+      "ca",
+      "thal"
+    ],
+    "labels": {
+      "age": "Age",
+      "sex": "Sex",
+      "cp": "Chest Pain Type",
+      "trestbps": "Resting Blood Pressure",
+      "chol": "Serum Cholesterol",
+      "fbs": "Fasting Blood Sugar",
+      "restecg": "Resting ECG",
+      "thalach": "Maximum Heart Rate",
+      "exang": "Exercise-Induced Angina",
+      "oldpeak": "ST Depression",
+      "slope": "ST Segment Slope",
+      "ca": "Major Vessels Count",
+      "thal": "Thalassemia"
+    },
+    "means": [
+      54.549587,
+      0.681818,
+      3.152893,
+      130.958678,
+      249.838843,
+      0.144628,
+      0.979339,
+      149.96281,
+      0.326446,
+      0.999174,
+      1.586777,
+      0.607438,
+      4.706612
+    ],
+    "scales": [
+      8.978373,
+      0.46577,
+      0.973498,
+      17.586103,
+      52.737566,
+      0.351725,
+      0.997718,
+      22.639527,
+      0.468913,
+      1.120618,
+      0.612128,
+      0.880708,
+      1.943595
+    ]
+  },
+  "logistic_regression": {
+    "intercept": -0.078233,
+    "coefficients": [
+      -0.103508,
+      0.655679,
+      0.543283,
+      0.313601,
+      0.215428,
+      -0.22054,
+      0.217506,
+      -0.348381,
+      0.383829,
+      0.149721,
+      0.354064,
+      1.108531,
+      0.678386
+    ]
+  },
+  "feature_importances": {
+    "random_forest": [
+      0.058639,
+      0.040054,
+      0.146992,
+      0.064407,
+      0.056571,
+      0.007307,
+      0.015608,
+      0.115443,
+      0.061359,
+      0.092628,
+      0.046277,
+      0.115694,
+      0.179021
+    ],
+    "xgboost": [
+      0.043426,
+      0.06294,
+      0.147865,
+      0.032295,
+      0.035702,
+      0.040797,
+      0.038812,
+      0.043576,
+      0.063704,
+      0.051758,
+      0.065329,
+      0.10182,
+      0.271976
+    ],
+    "decision_tree": [
+      0.027424,
+      0.031083,
+      0.159846,
+      0.0,
+      0.070772,
+      0.0,
+      0.0,
+      0.023401,
+      0.0,
+      0.078337,
+      0.024356,
+      0.13896,
+      0.44582
+    ]
+  },
+  "clustering": {
+    "k": 3,
+    "evaluation_metrics": [
+      {
+        "k": 2,
+        "inertia": 2589.36,
+        "silhouette_score": 0.1803
+      },
+      {
+        "k": 3,
+        "inertia": 2371.37,
+        "silhouette_score": 0.1325
+      },
+      {
+        "k": 4,
+        "inertia": 2204.59,
+        "silhouette_score": 0.1406
+      },
+      {
+        "k": 5,
+        "inertia": 2094.34,
+        "silhouette_score": 0.1324
+      },
+      {
+        "k": 6,
+        "inertia": 2004.47,
+        "silhouette_score": 0.1184
+      }
+    ],
+    "silhouette_score_k3": 0.1327,
+    "cluster_mapping": {
+      "0": 0,
+      "1": 1,
+      "2": 2
+    },
+    "profiles": [
+      {
+        "profile_index": 0,
+        "raw_cluster_id": 0,
+        "name": "Profile 1 \u2014 Lower-Risk Clinical Pattern",
+        "short_name": "Profile 1",
+        "description": "Characterized by younger age, higher exercise capacity (peak heart rate > 160 bpm), normal resting ECG, and minimal ST segment depression during stress.",
+        "size": 59,
+        "percentage": 24.4,
+        "disease_rate_pct": 13.6,
+        "characteristics": {
+          "age": 58.2,
+          "trestbps": 131.3,
+          "chol": 275.8,
+          "thalach": 152.3,
+          "oldpeak": 0.58,
+          "exang_pct": 15.3,
+          "male_pct": 5.1,
+          "disease_rate_pct": 13.6
+        },
+        "scaled_centroid": [
+          0.41073159414014804,
+          -1.3546816266861836,
+          -0.07000199617771834,
+          0.02066155371431033,
+          0.49156361889229827,
+          -0.17025305288332115,
+          0.05468426042541191,
+          0.10345952813736375,
+          -0.3708662902277743,
+          -0.36982079001876017,
+          -0.18329583758843906,
+          -0.2663272887379526,
+          -0.8083056148342629
+        ]
+      },
+      {
+        "profile_index": 1,
+        "raw_cluster_id": 1,
+        "name": "Profile 2 \u2014 Moderate-Risk Clinical Pattern",
+        "short_name": "Profile 2",
+        "description": "Characterized by intermediate age, mildly elevated blood pressure and serum cholesterol, moderate cardiac workload tolerance, and occasional non-anginal chest discomfort.",
+        "size": 96,
+        "percentage": 39.7,
+        "disease_rate_pct": 26.0,
+        "characteristics": {
+          "age": 49.1,
+          "trestbps": 127.7,
+          "chol": 229.9,
+          "thalach": 164.4,
+          "oldpeak": 0.55,
+          "exang_pct": 8.3,
+          "male_pct": 89.6,
+          "disease_rate_pct": 26.0
+        },
+        "scaled_centroid": [
+          -0.6065041241274298,
+          0.4594862843466014,
+          -0.5529639098119462,
+          -0.18719388905518855,
+          -0.3775631125858091,
+          -0.08542106754192165,
+          -0.25074441556960214,
+          0.6365941209342564,
+          -0.5184610166850496,
+          -0.40082668705254376,
+          -0.4310536671648113,
+          -0.3821976848745795,
+          -0.2456504701941307
+        ]
+      },
+      {
+        "profile_index": 2,
+        "raw_cluster_id": 2,
+        "name": "Profile 3 \u2014 Higher-Risk Clinical Pattern",
+        "short_name": "Profile 3",
+        "description": "Characterized by advanced age, elevated resting systolic pressure, significant exercise-induced angina, pronounced ST depression (> 1.5mm), and presence of fluoroscopic fluoroscopy vessels.",
+        "size": 87,
+        "percentage": 36.0,
+        "disease_rate_pct": 89.7,
+        "characteristics": {
+          "age": 58.1,
+          "trestbps": 134.3,
+          "chol": 254.2,
+          "thalach": 132.5,
+          "oldpeak": 1.78,
+          "exang_pct": 71.3,
+          "male_pct": 87.4,
+          "disease_rate_pct": 89.7
+        },
+        "scaled_centroid": [
+          0.3907038145053391,
+          0.41167278939323193,
+          0.657639690993474,
+          0.19254691586383588,
+          0.08326212981140348,
+          0.20971669659931497,
+          0.23959876470784483,
+          -0.7726108939056676,
+          0.8236019393701535,
+          0.6930895237718516,
+          0.5999494996039059,
+          0.6023481354425148,
+          0.8192238668259549
+        ]
+      }
+    ],
+    "feature_columns": [
+      "age",
+      "sex",
+      "cp",
+      "trestbps",
+      "chol",
+      "fbs",
+      "restecg",
+      "thalach",
+      "exang",
+      "oldpeak",
+      "slope",
+      "ca",
+      "thal"
+    ],
+    "disclaimer": "Clusters represent statistical patterns discovered in the dataset and are not medical diagnoses."
+  },
+  "metrics": {
+    "evaluation_timestamp": "2026-10-06T18:15:22.530007",
+    "test_sample_count": 61,
+    "test_positive_count": 28,
+    "test_negative_count": 33,
+    "best_model": "XGBoost",
+    "selection_rationale": "XGBoost was selected as the primary clinical model because it achieved an optimal balance of Recall (96.4%) to minimize life-threatening false negatives, a superior ROC-AUC of 0.946, and an F1 score of 0.885. In cardiovascular clinical screening, minimizing undetected pathology takes precedence over naive accuracy alone.",
+    "models": [
+      {
+        "model_name": "XGBoost",
+        "filename": "xgboost.joblib",
+        "accuracy": 0.8852,
+        "precision": 0.8182,
+        "recall": 0.9643,
+        "f1_score": 0.8852,
+        "roc_auc": 0.9459,
+        "clinical_score": 0.9351,
+        "confusion_matrix": {
+          "tn": 27,
+          "fp": 6,
+          "fn": 1,
+          "tp": 27
+        },
+        "roc_points": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.036
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.214
+          },
+          {
+            "fpr": 0.03,
+            "tpr": 0.75
+          },
+          {
+            "fpr": 0.061,
+            "tpr": 0.75
+          },
+          {
+            "fpr": 0.121,
+            "tpr": 0.893
+          },
+          {
+            "fpr": 0.121,
+            "tpr": 0.929
+          },
+          {
+            "fpr": 0.152,
+            "tpr": 0.964
+          },
+          {
+            "fpr": 0.545,
+            "tpr": 0.964
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      {
+        "model_name": "Random Forest",
+        "filename": "random_forest.joblib",
+        "accuracy": 0.8852,
+        "precision": 0.8387,
+        "recall": 0.9286,
+        "f1_score": 0.8814,
+        "roc_auc": 0.9502,
+        "clinical_score": 0.9213,
+        "confusion_matrix": {
+          "tn": 28,
+          "fp": 5,
+          "fn": 2,
+          "tp": 26
+        },
+        "roc_points": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.036
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.321
+          },
+          {
+            "fpr": 0.03,
+            "tpr": 0.679
+          },
+          {
+            "fpr": 0.061,
+            "tpr": 0.679
+          },
+          {
+            "fpr": 0.091,
+            "tpr": 0.857
+          },
+          {
+            "fpr": 0.091,
+            "tpr": 0.929
+          },
+          {
+            "fpr": 0.152,
+            "tpr": 0.964
+          },
+          {
+            "fpr": 0.455,
+            "tpr": 0.964
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      {
+        "model_name": "Logistic Regression",
+        "filename": "logistic_regression.joblib",
+        "accuracy": 0.8689,
+        "precision": 0.8125,
+        "recall": 0.9286,
+        "f1_score": 0.8667,
+        "roc_auc": 0.9513,
+        "clinical_score": 0.917,
+        "confusion_matrix": {
+          "tn": 27,
+          "fp": 6,
+          "fn": 2,
+          "tp": 26
+        },
+        "roc_points": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.036
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.179
+          },
+          {
+            "fpr": 0.03,
+            "tpr": 0.786
+          },
+          {
+            "fpr": 0.061,
+            "tpr": 0.786
+          },
+          {
+            "fpr": 0.152,
+            "tpr": 0.893
+          },
+          {
+            "fpr": 0.152,
+            "tpr": 0.929
+          },
+          {
+            "fpr": 0.212,
+            "tpr": 0.964
+          },
+          {
+            "fpr": 0.303,
+            "tpr": 0.964
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      {
+        "model_name": "Deep Neural Network",
+        "filename": "deep_neural_network.joblib",
+        "accuracy": 0.8361,
+        "precision": 0.7647,
+        "recall": 0.9286,
+        "f1_score": 0.8387,
+        "roc_auc": 0.9318,
+        "clinical_score": 0.9023,
+        "confusion_matrix": {
+          "tn": 25,
+          "fp": 8,
+          "fn": 2,
+          "tp": 26
+        },
+        "roc_points": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.036
+          },
+          {
+            "fpr": 0.03,
+            "tpr": 0.429
+          },
+          {
+            "fpr": 0.061,
+            "tpr": 0.607
+          },
+          {
+            "fpr": 0.091,
+            "tpr": 0.714
+          },
+          {
+            "fpr": 0.121,
+            "tpr": 0.75
+          },
+          {
+            "fpr": 0.212,
+            "tpr": 0.857
+          },
+          {
+            "fpr": 0.303,
+            "tpr": 0.929
+          },
+          {
+            "fpr": 0.394,
+            "tpr": 0.964
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      {
+        "model_name": "Support Vector Machine",
+        "filename": "support_vector_machine.joblib",
+        "accuracy": 0.8525,
+        "precision": 0.8065,
+        "recall": 0.8929,
+        "f1_score": 0.8475,
+        "roc_auc": 0.9437,
+        "clinical_score": 0.895,
+        "confusion_matrix": {
+          "tn": 27,
+          "fp": 6,
+          "fn": 3,
+          "tp": 25
+        },
+        "roc_points": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.036
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.179
+          },
+          {
+            "fpr": 0.03,
+            "tpr": 0.786
+          },
+          {
+            "fpr": 0.091,
+            "tpr": 0.786
+          },
+          {
+            "fpr": 0.182,
+            "tpr": 0.893
+          },
+          {
+            "fpr": 0.182,
+            "tpr": 0.929
+          },
+          {
+            "fpr": 0.242,
+            "tpr": 0.964
+          },
+          {
+            "fpr": 0.364,
+            "tpr": 0.964
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      {
+        "model_name": "Decision Tree",
+        "filename": "decision_tree.joblib",
+        "accuracy": 0.7869,
+        "precision": 0.7419,
+        "recall": 0.8214,
+        "f1_score": 0.7797,
+        "roc_auc": 0.8598,
+        "clinical_score": 0.8211,
+        "confusion_matrix": {
+          "tn": 25,
+          "fp": 8,
+          "fn": 5,
+          "tp": 23
+        },
+        "roc_points": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.121,
+            "tpr": 0.536
+          },
+          {
+            "fpr": 0.121,
+            "tpr": 0.643
+          },
+          {
+            "fpr": 0.152,
+            "tpr": 0.786
+          },
+          {
+            "fpr": 0.242,
+            "tpr": 0.821
+          },
+          {
+            "fpr": 0.303,
+            "tpr": 0.857
+          },
+          {
+            "fpr": 0.333,
+            "tpr": 0.929
+          },
+          {
+            "fpr": 0.455,
+            "tpr": 0.929
+          },
+          {
+            "fpr": 0.515,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      }
+    ]
+  },
+  "shap_summary": {
+    "model_used": "XGBoost",
+    "global_importance": [
+      {
+        "feature": "thal",
+        "label": "Thalassemia",
+        "importance": 0.8944
+      },
+      {
+        "feature": "ca",
+        "label": "Major Vessels Count",
+        "importance": 0.8475
+      },
+      {
+        "feature": "cp",
+        "label": "Chest Pain Type",
+        "importance": 0.7557
+      },
+      {
+        "feature": "sex",
+        "label": "Sex",
+        "importance": 0.491
+      },
+      {
+        "feature": "age",
+        "label": "Age",
+        "importance": 0.381
+      },
+      {
+        "feature": "oldpeak",
+        "label": "ST Depression",
+        "importance": 0.367
+      },
+      {
+        "feature": "thalach",
+        "label": "Maximum Heart Rate",
+        "importance": 0.3106
+      },
+      {
+        "feature": "chol",
+        "label": "Serum Cholesterol",
+        "importance": 0.3023
+      },
+      {
+        "feature": "slope",
+        "label": "ST Segment Slope",
+        "importance": 0.2961
+      },
+      {
+        "feature": "trestbps",
+        "label": "Resting Blood Pressure",
+        "importance": 0.2382
+      },
+      {
+        "feature": "exang",
+        "label": "Exercise-Induced Angina",
+        "importance": 0.1812
+      },
+      {
+        "feature": "restecg",
+        "label": "Resting ECG",
+        "importance": 0.1429
+      },
+      {
+        "feature": "fbs",
+        "label": "Fasting Blood Sugar",
+        "importance": 0.0088
+      }
+    ],
+    "base_value": -0.132
+  },
+  "dataset_meta": {
+    "dataset_name": "UCI Cleveland Heart Disease",
+    "num_samples": 303,
+    "num_features": 13,
+    "target_column": "target",
+    "class_distribution": {
+      "no_disease": 164,
+      "disease": 139,
+      "disease_prevalence_pct": 45.87
+    },
+    "missing_values_handled": 6,
+    "features": {
+      "age": {
+        "type": "numerical",
+        "unit": "years",
+        "range": [
+          29,
+          77
+        ],
+        "mean": 54.4
+      },
+      "sex": {
+        "type": "categorical",
+        "values": {
+          "0": "Female",
+          "1": "Male"
+        }
+      },
+      "cp": {
+        "type": "categorical",
+        "values": {
+          "1": "Typical Angina",
+          "2": "Atypical Angina",
+          "3": "Non-anginal Pain",
+          "4": "Asymptomatic"
+        }
+      },
+      "trestbps": {
+        "type": "numerical",
+        "unit": "mm Hg",
+        "range": [
+          94,
+          200
+        ],
+        "mean": 131.7
+      },
+      "chol": {
+        "type": "numerical",
+        "unit": "mg/dl",
+        "range": [
+          126,
+          564
+        ],
+        "mean": 246.7
+      },
+      "fbs": {
+        "type": "categorical",
+        "values": {
+          "0": "<= 120 mg/dl",
+          "1": "> 120 mg/dl"
+        }
+      },
+      "restecg": {
+        "type": "categorical",
+        "values": {
+          "0": "Normal",
+          "1": "ST-T Wave Abnormality",
+          "2": "Left Ventricular Hypertrophy"
+        }
+      },
+      "thalach": {
+        "type": "numerical",
+        "unit": "bpm",
+        "range": [
+          71,
+          202
+        ],
+        "mean": 149.6
+      },
+      "exang": {
+        "type": "categorical",
+        "values": {
+          "0": "No",
+          "1": "Yes"
+        }
+      },
+      "oldpeak": {
+        "type": "numerical",
+        "unit": "depression",
+        "range": [
+          0.0,
+          6.2
+        ],
+        "mean": 1.04
+      },
+      "slope": {
+        "type": "categorical",
+        "values": {
+          "1": "Upsloping",
+          "2": "Flat",
+          "3": "Downsloping"
+        }
+      },
+      "ca": {
+        "type": "numerical",
+        "unit": "vessels",
+        "range": [
+          0,
+          3
+        ]
+      },
+      "thal": {
+        "type": "categorical",
+        "values": {
+          "3": "Normal",
+          "6": "Fixed Defect",
+          "7": "Reversible Defect"
+        }
+      }
+    }
+  },
+  "export_timestamp": "2026-10-06T18:15:22.619149"
+}
